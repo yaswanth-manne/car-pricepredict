@@ -26,5 +26,6 @@ def predict():
     prediction = model.predict(pd.DataFrame([[company, year, km_driven, fuel]], columns=['name', 'year', 'km_driven', 'fuel']))
     print(prediction[0])
     return str(np.round(prediction[0],2))
+
 if __name__=="__main__":
-    app.run(debug=True)
+    app.run()
